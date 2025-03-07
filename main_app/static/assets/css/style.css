@@ -171,9 +171,11 @@ p {
 /* Preloader End */
 
 /* Navbar Start */
-.navbar-brand {
-    max-width: 106px;
+.navbar-brand img {
+    max-width: 80px; /* Adjust the size as needed */
+    height: auto; /* Maintains aspect ratio */
 }
+
 .d2c_navbar {
     padding: 0px 0px;
     background-image: url(../images/navbar_bg.png);
