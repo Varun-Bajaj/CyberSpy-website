@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- OG Meta Tag -->
     <meta name="robots" content="index, follow">
-    <meta name="og:title" content="CSUME V3 - Cyber Security Expert One Page Website Template">
+    <meta name="og:title" content="CyberSpy - Unveiling the Digital Footprint">
     <meta name="og:description" content="Invest in Csume V3 onepage cyber security template today and take your cyber security expertise to new heights.">
     <meta property="og:image" content="https://designtocodes.com/wp-content/uploads/2024/01/Best-Csume-V3-Onepage-Cyber-Security-Template">
     <!-- Title -->
-    <title>CSUME V3 - Cyber Security Expert One Page Website Template</title>
+    <title>CyberSpy - Unveiling the Digital Footprint</title>
     <!-- Favicon -->
     <link rel="icon" id="favicon" href="{% static './assets/images/favicon.png' %}" type="image/gif" sizes="16x16">
     <!-- Animate CSS Link -->
@@ -397,9 +397,10 @@
                     <div class="col-md-12 col-lg-4 mt-4 mt-lg-0 wow fadeInRight">
                         <div class="d2c_footer_card">
                             <h3>Get in touch</h3>
-                            <form class="needs-validation" novalidate>
+                            <form class="needs-validation" method="post" action="{% url 'index_page' %}" novalidate>
+                                {% csrf_token %}
                                 <div class="input-group">
-                                    <input type="email" class="form-control" placeholder="Email" aria-describedby="newsletter_btn" autocomplete="on" required>
+                                    <input type="email" class="form-control" name="email2" placeholder="Email" aria-describedby="newsletter_btn" autocomplete="on" required>
                                     <button class="btn" type="submit" id="newsletter_btn">drive in</button>
                                 </div>
                             </form>

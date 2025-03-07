@@ -18,5 +18,15 @@ def index_page(request):
         settings.EMAIL_HOST_USER,
         ['kunaladwani1456@gmail.com'], 
         fail_silently=False)
+    
+    if request.method == 'POST':
+       email2 = request.POST.get('email2')
+       
+       send_mail('Contact Form',
+        f"email:- {email2}",
+        settings.EMAIL_HOST_USER,
+        ['kunaladwani1456@gmail.com'], 
+        fail_silently=False)
+    
 
     return render(request,"index.html")
