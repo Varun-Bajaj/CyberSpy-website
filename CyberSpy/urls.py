@@ -18,11 +18,12 @@ from django.contrib import admin
 from django.urls import path
 
 from main_app.views import index_page
-
+from django.conf.urls.static import static
+from django.conf import settings
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index_page, name="index_page"),
     
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
